@@ -17,8 +17,15 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+
+    versionCatalogs {
+        create("kmpLibs") {
+            from(files("kmp/gradle/libs.versions.toml"))
+        }
+    }
 }
 
 rootProject.name = "KMPIntegrationDemoAndroid"
-include(":app")
+include(":app", ":shared")
+project(":shared").projectDir = File("kmp/shared")
  
