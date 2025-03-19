@@ -10,7 +10,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import cz.hlinka.kmpintegrationdemo.Greeter
 import cz.hlinka.kmpintegrationdemoandroid.ui.theme.KMPIntegrationDemoAndroidTheme
 
@@ -34,7 +36,10 @@ class MainActivity : ComponentActivity() {
 fun Greeting(modifier: Modifier = Modifier) {
     Text(
         text = Greeter().greet(),
-        modifier = modifier
+        modifier = modifier,
+        style = TextStyle(
+            fontSize = 24.sp
+        )
     )
 }
 
